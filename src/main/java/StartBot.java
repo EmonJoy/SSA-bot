@@ -23,6 +23,7 @@ public class StartBot extends TelegramLongPollingBot {
             String userMessage = update.getMessage().getText();
             String chatId = update.getMessage().getChatId().toString();
             String reply;
+            String welcome_reply = "";
 
             boolean find = false;
 
@@ -41,9 +42,6 @@ public class StartBot extends TelegramLongPollingBot {
 
             if(!find) {
                 System.out.println(chatId + "," + userMessage);
-            }else {
-                System.out.println("");
-                
             }
 
             try {
