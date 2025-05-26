@@ -5,6 +5,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
+
 public class StartBot extends TelegramLongPollingBot {
 
     @Override
@@ -25,6 +26,8 @@ public class StartBot extends TelegramLongPollingBot {
             String reply;
             String welcome_reply = "";
 
+            Algo_test t = new Algo_test();
+
             boolean find = false;
 
             if(userMessage.equalsIgnoreCase("/start"))
@@ -32,16 +35,12 @@ public class StartBot extends TelegramLongPollingBot {
                 reply = "Hello there, this bot is under testing..";
                 find = true;
             } else {
-                reply = "Working "+ userMessage;
-                find = false;
+
+                if()
 
             }
 
-
             SendMessage message = new SendMessage(chatId, reply);
-
-            message.setText("Hello");
-
 
             if(!find) {
                 System.out.println(chatId + "," + userMessage);
