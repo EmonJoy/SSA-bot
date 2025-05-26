@@ -40,6 +40,9 @@ public class StartBot extends TelegramLongPollingBot {
 
             SendMessage message = new SendMessage(chatId, reply);
 
+            message.setText("Hello");
+
+
             if(!find) {
                 System.out.println(chatId + "," + userMessage);
             }
